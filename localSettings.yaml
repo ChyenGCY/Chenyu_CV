@@ -1,0 +1,31 @@
+defaultIndent: "  "
+
+modifyLineBreaks:
+  textWrapOptions:
+    columns: 100
+  oneSentencePerLine:
+    manipulateSentences: 1
+    textWrapSentences: 1
+  removeTrailingWhitespace:
+    beforeProcessing: 0
+    afterProcessing: 1
+lookForAlignDelims:
+  tabular:
+    delims: 1
+    alignDoubleBackSlash: 1
+    spacesBeforeDoubleBackSlash: 1
+    multiColumnGrouping: 0
+    alignRowsWithoutMaxDelims: 1
+    spacesBeforeAmpersand: 1
+    spacesAfterAmpersand: 1
+    justification: left
+    alignFinalDoubleBackSlash: 0
+    dontMeasure: 0
+    delimiterRegEx: (?<!\\)(&)
+    delimiterJustification: left
+    lookForChildCodeBlocks: 1
+    alignContentAfterDoubleBackSlash: 0
+    spacesAfterDoubleBackSlash: 1
+  tabularx:
+    delims: 1
+    longtable: 1
