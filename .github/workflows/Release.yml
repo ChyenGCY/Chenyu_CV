@@ -5,7 +5,7 @@ on:
       - "*"
 jobs:
   build_latex:
-    if: github.repository == 'Iydon/sustechthesis'
+    if: github.repository == 'ChyenGCY/Chenyu_CV'
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
