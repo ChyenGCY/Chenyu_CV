@@ -1,0 +1,282 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Chenyu Gu
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+%----------------------------------------------------
+%                  Packages
+%----------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}        % for symbols like \Letter
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}     % for GitHub, LinkedIn icons, etc.
+\usepackage{makecell}        % for multi-line cells in tables
+\input{glyphtounicode}       % ensure PDF is ATS-friendly
+
+% Ensure generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%----------------------------------------------------
+%                 Page Setup
+%----------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}               % clear all header and footer fields
+\fancyfoot{}             % no page numbering
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1in}
+
+% URL style
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
+
+%----------------------------------------------------
+%          Custom Commands for Resume
+%----------------------------------------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeEducationHeading}[5]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+    \multicolumn{2}{l}{\textit{\small#5}}\\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeOrganizationHeading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #2} \\
+    \textit{\small#3}
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{
+  \item[$\circ$] \small\textbf{{#1 \vspace{-4pt}}}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% For itemized lists with custom indentation
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%                RESUME START
+%-------------------------------------------
+\begin{document}
+
+%----------------------------------------------------
+%                     Header
+%----------------------------------------------------
+\begin{center}
+  \textbf{\Huge \scshape Chenyu Gu} \\ \vspace{3pt}
+  \small
+  \faMobile \hspace{.5pt} \href{tel:14046374484}{+1 (404) 637 4484}
+  $|$
+  \faAt \hspace{.5pt} \href{mailto:cgu84@gatech.edu}{cgu84@gatech.edu}
+  $|$
+  \faLinkedinSquare \hspace{.5pt}\href{https://www.linkedin.com/in/chenyu-gu-38337226b/}{LinkedIn}
+\end{center}
+
+%----------------------------------------------------
+%                   Education
+%----------------------------------------------------
+\vspace{-20pt}
+\section{Education}
+\vspace{3pt}
+\resumeSubHeadingListStart
+
+\resumeEducationHeading
+{Georgia Institute of Technology}{Atlanta, United States}
+{M.S. in Bioengineering (ECE); \textbf{GPA: 4.00/4.00}}{Aug 2024 -- Present}
+{\textbf{Relevant coursework:} Finite Element Method, Robotics, Digital Control, ML.}
+
+\vspace{-3pt}
+\resumeEducationHeading
+{Southern University of Science and Technology}{Shenzhen, China}
+{B.S. in Intelligent Medical Engineering; \textbf{GPA: 3.82/4.00}}{Aug 2020 -- Jun 2024}
+{\small
+  \makecell[{{p{0.97\textwidth}}}]{%
+    \textbf{Achievements:} Excellent Graduation Thesis Award, Outstanding Student Scholarship, First Prize of Scholarship for Freshmen. \\
+    \textbf{Relevant coursework:} Medical Robotics \& Imaging, Circuits, Digital Signal Processing, Neural Engineering and BCI.\vspace{5pt}
+  }
+}
+
+\vspace{-7pt}
+\resumeEducationHeading
+{KTH Royal Institute of Technology}{Stockholm, Sweden}
+{Exchange student in Electrical Engineering and Computer Science}{Sep 2023 -- Jan 2024}
+{\textbf{Relevant coursework:} Principles of Wireless Sensor Networks, Social Robotics.}
+
+\vspace{-3pt}
+\resumeEducationHeading
+{Imperial College London}{London, United Kingdom}
+{Data Science Bachelor Summer School; \textbf{Grade: B-merit}}{Jun 2022 -- Aug 2022}
+{\textbf{Relevant coursework:} Deep Learning.}
+
+\resumeSubHeadingListEnd
+
+%----------------------------------------------------
+%                     Skills
+%----------------------------------------------------
+\section{Skills}
+\vspace{3pt}
+\resumeItemListStart
+
+\resumeItem{\textbf{Laboratory:} FEM analysis, 3D printing, PCB design, 
+Soldering, Oscilloscope, Signal generator, Motion capture system.}
+
+\resumeItem{\textbf{Programming:} Python (Proficient in data analysis and ML), 
+C (Embedded systems), MATLAB (Data analysis), Rust (Systems design), Java.}
+
+\resumeItem{\textbf{Software:} Ansys (FEM), SolidWorks (3D modeling), 
+EasyEDA/KiCad (PCB design), Unity (Game interface), Blender.}
+
+\resumeItem{\textbf{Tools:} Git, Neovim, Docker, Jupyter, VS Code, Adobe PS, Final Cut Pro, Microsoft Office.}
+
+\resumeItemListEnd
+
+%----------------------------------------------------
+%                  Experience
+%----------------------------------------------------
+\vspace{-8pt}
+\section{Experience}
+\vspace{3pt}
+\resumeSubHeadingListStart
+
+%---------- RoboMed Lab ----------
+\resumeSubheading
+{RoboMed Lab}{Atlanta, United States}
+{Graduate Research Assistant; \textbf{Skills:} Mechanical/Medical Device Design, CAD Modeling}{Oct 2024 -- Present}
+\resumeItemListStart
+  \resumeItem{Designed a hydraulic tendon-driven guidewire that is non-conductive, MRI safe, and steerable in 3D.}
+  \resumeItem{Modeled static and kinematic properties of the guidewire and conducted experiments to validate the model.}
+\resumeItemListEnd
+
+%---------- I-HeaL Lab ----------
+\resumeSubheading
+{Intelligent Heart Technology Lab (I-HeaL)}{Stockholm, Sweden}
+{Visiting Research Assistant; \textbf{Skills:} Algorithm Development, Signal Processing}{Oct 2023 -- Jan 2024}
+\resumeItemListStart
+  \resumeItem{Extracted gait parameters and human COM to explore the relationship between movement and cardiovascular functions.}
+  \resumeItem{Deployed a Kalman filter for IMU sensor and developed algorithms for gait and COM extraction.}
+\resumeItemListEnd
+
+%---------- Dept. of Orthopedics ----------
+\resumeSubheading
+{Department of Orthopedics, First People's Hospital}{Shenzhen, China}
+{Research Assistant; \textbf{Skills:} Embedded Systems (HW \& SW), Clinical Validation}{Jun 2023}
+\resumeItemListStart
+  \resumeItem{Developed a surgery navigation system using on-handle and on-body modules with a 9-axis IMU and gyroscope.}
+  \resumeItem{Demonstrated effectiveness in total hip arthroplasty surgeries via the direct anterior approach.}
+\resumeItemListEnd
+
+%---------- Rehab Center ----------
+\resumeSubheading
+{Rehabilitation Center, Second People's Hospital}{Shenzhen, China}
+{Intern; \textbf{Skills:} Clinical Observation, Patient Interaction}{Aug 2022}
+\resumeItemListStart
+  \resumeItem{Assisted doctors in rehabilitation evaluations and facility setup for patient rehabilitation.}
+  \resumeItem{Acquired familiarity with basic rehabilitation facilities and procedures.}
+\resumeItemListEnd
+
+%---------- Brain-robot Rehabilitation Lab ----------
+\resumeSubheading
+{Brain-robot Rehabilitation Lab}{Shenzhen, China}
+{Project Leader, Undergraduate Research Assistant}{Feb 2022 -- May 2024}
+\resumeItemListStart
+
+  \resumeSubItem{Motion Capture for Rehabilitation; \textit{Skills: System Development, Deep Learning}}
+  \resumeItem{Developed a motion capture system using UWB technology and IMU for human motion recovery.}
+  \resumeItem{Created Unity visualization and Python code for signal transmission. Applied deep learning for sparse motion capture.}
+  \resumeItem{Tested on healthy subjects for rehabilitation exercises and evaluated effectiveness.}
+
+  \resumeSubItem{Center of Mass Estimation and Rehabilitation Applications; \textit{Skills: Data Analysis, Acquisition}}
+  \resumeItem{Utilized IMU motion capture to estimate 3D human center of mass for rehabilitation purposes.}
+  \resumeItem{Analyzed the center of mass to extract motion features and perform rehabilitation assessments.}
+
+  \resumeSubItem{Review on Motion Capture for Rehabilitation; \textit{Skills: Literature Review}}
+  \resumeItem{Investigated IMU-based motion capture applications in rehabilitation and authored a comprehensive review.}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%----------------------------------------------------
+%                 Publications
+%----------------------------------------------------
+\vspace{-12pt}
+\section{Publications}
+\resumeItemListStart
+  \resumeItem{\textbf{C. Gu*} et al., “IMU-based motion capture system for rehabilitation applications: A systematic
+  review,” \textit{Biomimetic Intelligence and Robotics}, vol. 3, no. 2, p. 100097, 2023. doi: \href{https://doi.org/10.1016/j.birob.2023.100097}{10.1016/j.birob.2023.100097}}
+  \resumeItem{\textbf{C. Gu*} et al., “A Portable Inertial Navigation System for Total Hip Arthroplasty Targeting Direct
+  Anterior Approach” (Accepted by \textit{IEEE Transactions on Instrumentation and Measurement}).}
+\resumeItemListEnd
+
+%----------------------------------------------------
+%                 Misc
+%----------------------------------------------------
+\vspace{-8pt}
+\section{Extracurricular \& Misc}
+\resumeItemListStart
+  \resumeItem{\textbf{Language:} English (Proficient), Chinese (Proficient), French (Elementary).}
+  \resumeItem{\textbf{Involvement:} Member of the propaganda department of student union, Member of school archery team.}
+\resumeItemListEnd
+
+\end{document}
