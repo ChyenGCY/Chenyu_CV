@@ -7,5 +7,6 @@ Modified from arasgungore's cv.
 ## Run on Terminal
 
 ```
-pdflatex main.tex
+pdflatex resume.tex;
+pdflatex cv.tex;
 ```

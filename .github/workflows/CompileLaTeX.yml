@@ -26,5 +26,5 @@ jobs:
         with:
           name: Example-PDFs-texlive-${{ matrix.texlive }}
           path: |
-            cv.pdf
+            CV.pdf
             resume.pdf
