@@ -1,14 +1,11 @@
 %-------------------------
-% Resume in LaTeX
-% Author: Aras Gungore
-% License: MIT
-%-------------------------
+% Resume in Latex
+% Author : Aras Gungore
+% License : MIT
+%------------------------
 
 \documentclass[letterpaper,11pt]{article}
 
-%----------------------------------------------------
-%                  Packages
-%----------------------------------------------------
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -22,17 +19,24 @@
 \usepackage{tabularx}
 \usepackage{hyphenat}
 \usepackage{fontawesome}
-\input{glyphtounicode}  % Ensure ATS-friendly PDF
+\input{glyphtounicode}
 
-% Ensure that generated PDF is machine readable/ATS parsable
-\pdfgentounicode=1
 
-%----------------------------------------------------
-%              Page Layout and Style
-%----------------------------------------------------
+%---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
 \pagestyle{fancy}
-\fancyhf{}               % clear all header and footer fields
-\fancyfoot{}             % no footers
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -40,7 +44,7 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-0.5in}
+\addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -54,67 +58,73 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-%----------------------------------------------------
-%            Custom Resume Commands
-%----------------------------------------------------
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
   }
 }
 
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-7pt}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
+
 \newcommand{\resumeSubSubheading}[2]{
-  \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textit{\small#1} & \textit{\small #2} \\
-  \end{tabular*}\vspace{-7pt}
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
 }
+
 
 \newcommand{\resumeEducationHeading}[6]{
   \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small#3} & \textit{\small #4} \\
-    \textit{\small#5} & \textit{\small #6} \\
-  \end{tabular*}\vspace{-5pt}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-5pt}
 }
 
+
 \newcommand{\resumeProjectHeading}[2]{
-  \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \small#1 & #2 \\
-  \end{tabular*}\vspace{-7pt}
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
 }
+
 
 \newcommand{\resumeOrganizationHeading}[4]{
   \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & \textit{\small #2} \\
-    \textit{\small#3}
-  \end{tabular*}\vspace{-7pt}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-% For itemized lists with custom indentation
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%            RESUME STARTS HERE
-%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 %----------------------------------------------------
@@ -141,7 +151,7 @@
 {Georgia Institute of Technology}{Atlanta, United States}
 {M.
   S.
-  in Bioengineering (ECE)}{Aug 2024 -- Present}
+  in Bioengineering (ECE); \textbf{GPA: 4.00/4.00}}{Aug 2024 -- Present}
 \resumeItem{\small \textbf{Relevant coursework:}
   Digital Control System, Finite Element Analysis.
 }
@@ -173,12 +183,14 @@
 %               Research Interests
 %----------------------------------------------------
 \section{Research Interests}
-\textbf{Medical Robots, Wearable Technology, Human Movement, and Medical Devices.}
+\vspace{2pt}
+\textbf{Medical Robotics, Wearable Technology, Human Movement, and Medical Devices.}
 
 %----------------------------------------------------
 %                 Publications
 %----------------------------------------------------
 \section{Publicatios}
+\vspace{3pt}
 \resumeItemListStart
   \resumeItem{
     \textbf{C. Gu} et al., “IMU-based motion capture system for rehabilitation applications: A systematic
@@ -193,6 +205,7 @@
 %                 Publications
 %----------------------------------------------------
 \section{Patents}
+\vspace{3pt}
 \resumeItemListStart
   \resumeItem{
 Li Guangheng, Zhang Mingming, Yu Yangyi, and \textbf{Gu Chenyu}. A joint replacement simulation device and a joint replacement simulation method. China CN118634071A, filed July 9, 2024, and issued September 13, 2024. https://patents.google.com/patent/CN118634071A/en?oq=CN118634071A.
@@ -271,6 +284,7 @@ Li Guangheng, Zhang Mingming, Yu Yangyi, and \textbf{Gu Chenyu}. A joint replace
 %                   Projects
 %----------------------------------------------------
 \section{Projects}
+\vspace{3pt}
 \resumeSubHeadingListStart
 
 \resumeSubheading
@@ -305,13 +319,13 @@ Li Guangheng, Zhang Mingming, Yu Yangyi, and \textbf{Gu Chenyu}. A joint replace
 \vspace{2pt}
 \small{
   \begin{tabular}{p{16.3cm}@{\extracolsep{\fill}}r}
-    \textbf{(School-level) Excellent Graduation Thesis Award}                               & Jul 2024         \\[2pt]
-    \textbf{(School-level) Outstanding Student Scholarship of Zhicheng College}             & 2021, 2022, 2023 \\[2pt]
-    \textbf{(Provincial-level) "Internet Plus" Innovation and Entrepreneurship Competition} & Aug 2023         \\[2pt]
-    \textbf{(School-level) "Internet Plus" Innovation and Entrepreneurship Competition}     & Jul 2022         \\[2pt]
-    \textbf{(School-level) Excellent Team of "Sycamore Tree" Competition}                   & May 2022         \\[2pt]
-    \textbf{(National-level) RoboMaster 2021 Mecha Master Super Competition (First Prize)}  & Sep 2021         \\[2pt]
-    \textbf{(Top 3 in the Major) "Fu Turui" Fellowship, Dept. of Biomedical Engineering}    & Oct 2021         \\[2pt]
+    \textbf{(School-level) Excellent Graduation Thesis Award}                               & Jul 2024         \\[3pt]
+    \textbf{(School-level) Outstanding Student Scholarship of Zhicheng College}             & 2021, 2022, 2023 \\[3pt]
+    \textbf{(Provincial-level) "Internet Plus" Innovation and Entrepreneurship Competition} & Aug 2023         \\[3pt]
+    \textbf{(School-level) "Internet Plus" Innovation and Entrepreneurship Competition}     & Jul 2022         \\[3pt]
+    \textbf{(School-level) Excellent Team of "Sycamore Tree" Competition}                   & May 2022         \\[3pt]
+    \textbf{(National-level) RoboMaster 2021 Mecha Master Super Competition (First Prize)}  & Sep 2021         \\[3pt]
+    \textbf{(Top 3 in the Major) "Fu Turui" Fellowship, Dept. of Biomedical Engineering}    & Oct 2021         \\[3pt]
     \textbf{(Top 4 in the Province) First Prize Scholarship for Freshmen}                   & Sep 2020
   \end{tabular}
 }
@@ -320,6 +334,7 @@ Li Guangheng, Zhang Mingming, Yu Yangyi, and \textbf{Gu Chenyu}. A joint replace
 %                     Skills
 %----------------------------------------------------
 \section{Skills}
+\vspace{3pt}
 \resumeItemListStart
 \resumeItem{\textbf{Laboratory:} 3D printing, PCB design, Soldering, Oscilloscope, Signal generator,
   Motion capture system, Force plate.}
