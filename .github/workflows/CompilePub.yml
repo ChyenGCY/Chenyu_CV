@@ -1,20 +1,62 @@
-            - name: Compile and publish all LaTeX
-  # You may pin to the exact commit or the version.
-  # uses: DanySK/compile-and-publish-all-latex@5a8594f5b1c48468361626764a47abd750997bec
-  uses: DanySK/compile-and-publish-all-latex@0.3.10
-  with:
-    # Github token for deployment.
-    token: 
-    # Github token for deployment. Skips deployment otherwise.
-    diff-enable: # optional
-    # Latex files (globs) to diff, if diff enabled
-    diff-files: # optional, default is **/*.tex
+name: Build & Publish LaTeX
 
-    # Whether non-annotated tags should be considered
-    diff-lightweight-tags: # optional
-    # Newline-separated list of tags to create differential documents with. Ruby Regex syntax supported.
-    diff-tag-regex: # optional, default is .*
+on:
+  push:
+    branches:
+      - '**'   # every commit on any branch
+  workflow_dispatch:
 
-    # Whether the results should be deployed on GitHub. Defaults to true.
-    publish-enable: # optional, default is true
-          
+permissions:
+  contents: write   # needed to push to gh-pages
+
+concurrency:
+  group: build-latex-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Compile using a public Docker Hub image to avoid GHCR auth issues
+      - name: Compile PDFs
+        run: |
+          set -e
+          docker run --rm -v "$PWD":/docs texlive/texlive:latest \
+            /bin/bash -lc '
+              cd /docs
+              # If you prefer latexmk and it’s available in the image, uncomment:
+              # latexmk -pdf -interaction=nonstopmode CV-short.tex
+              # latexmk -pdf -interaction=nonstopmode resume.tex
+
+              # Fallback to pdflatex x2 for stable references
+              pdflatex -interaction=nonstopmode CV-short.tex || true
+              pdflatex -interaction=nonstopmode CV-short.tex
+              pdflatex -interaction=nonstopmode resume.tex || true
+              pdflatex -interaction=nonstopmode resume.tex
+            '
+          mkdir -p public
+          # Copy any produced PDFs to public for Pages
+          find . -maxdepth 1 -name "*.pdf" -print -exec cp {} public/ \;
+
+      - name: Upload PDFs as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdfs
+          path: |
+            ./*.pdf
+            public/*
+
+      # Publish to GitHub Pages (gh-pages branch)
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: public
+          publish_branch: gh-pages
+          keep_files: false
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
