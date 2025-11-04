@@ -19,7 +19,7 @@ jobs:
 
       - name: Build pdf
         run: |
-          docker run --rm -v "$(pwd)":/docs texlive/texlive:${{ matrix.texlive }} /bin/bash -c "pdflatex CV-short.tex; pdflatex resume.tex;"
+          docker run --rm -v "$(pwd)":/docs ghcr.io/ayaka-notes/texlive-full/texlive:${{ matrix.texlive }} /bin/bash -c "pdflatex CV-short.tex; pdflatex resume.tex;"
 
       - name: Publish PDF as actions assets
         uses: actions/upload-artifact@v4
