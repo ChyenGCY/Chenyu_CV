@@ -1,0 +1,20 @@
+            - name: Compile and publish all LaTeX
+  # You may pin to the exact commit or the version.
+  # uses: DanySK/compile-and-publish-all-latex@5a8594f5b1c48468361626764a47abd750997bec
+  uses: DanySK/compile-and-publish-all-latex@0.3.10
+  with:
+    # Github token for deployment.
+    token: 
+    # Github token for deployment. Skips deployment otherwise.
+    diff-enable: # optional
+    # Latex files (globs) to diff, if diff enabled
+    diff-files: # optional, default is **/*.tex
+
+    # Whether non-annotated tags should be considered
+    diff-lightweight-tags: # optional
+    # Newline-separated list of tags to create differential documents with. Ruby Regex syntax supported.
+    diff-tag-regex: # optional, default is .*
+
+    # Whether the results should be deployed on GitHub. Defaults to true.
+    publish-enable: # optional, default is true
+          
