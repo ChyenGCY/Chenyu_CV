@@ -1,0 +1,588 @@
+%-------------------------
+% Resume in Latex
+% Author : Aras Gungore
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+
+%---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeEducationHeading}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeOrganizationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------------------------------------------------
+%                   Header
+%----------------------------------------------------
+\begin{center}
+  \textbf{\Huge \scshape Chenyu Gu} \\ \vspace{3pt}
+  \small
+  \faMobile \hspace{.5pt} \href{tel:14046374484}{+1 (404) 637 4484}
+  $|$
+  \faAt \hspace{.5pt} \href{mailto:cgu84@gatech.edu}{cgu84@gatech.edu}
+  $|$
+  \faMapMarker \hspace{.5pt} \href{https://www.google.com/maps/place/Georgia+Institute+of+Technology/@33.7756222,-84.3988599,16z/data=!3m1!4b1}{Atlanta, United States}
+\end{center}
+%----------------------------------------------------
+%               Research Interests
+%----------------------------------------------------
+\section{Research Interests}
+\vspace{2pt}
+{\textbf{Medical \& Surgical Robotics:}
+\vspace{-5pt}
+\resumeItemListStart
+  \resumeItem{Surgical robots, wearable and rehabilitation robotics, minimally invasive systems, data-driven robotics control.}
+\resumeItemListEnd}
+{\textbf{Medical Devices \& Digital Health:}
+\vspace{-5pt}
+\resumeItemListStart
+  \resumeItem{Wearable/portable devices, surgical navigation, tele-rehabilitation.}
+\resumeItemListEnd}
+{\textbf{Biomechanics \& Physiological Signals:}
+\vspace{-5pt}
+\resumeItemListStart
+  \resumeItem{Gait and locomotion analysis, motion tracking, multi-modal sensing and analysis.}
+\resumeItemListEnd}
+\vspace{-5pt}
+\vspace{-5pt}
+
+%----------------------------------------------------
+%                  Education
+%----------------------------------------------------
+\section{Education}
+\vspace{3pt}
+\resumeSubHeadingListStart
+
+% GT
+\resumeSubheading
+{Georgia Institute of Technology}{Atlanta, United States}
+{\textbf{M.S.} in Bioengineering (ECE); \textbf{GPA: 4.00/4.00}}{Aug 2024 -- Present}
+
+
+
+\resumeItem{\small \textit{Relevant coursework:}
+  Digital Control System, Finite Element Analysis.}
+  \vspace{-4pt}
+% \resumeItem{\textit{Thesis title:} Design, modeling, and control of a hydraulically actuated continuum robot}
+% \vspace{-5pt}
+\resumeItem{\textit{Advisor: Dr. Jaydev Desai}}
+
+\vspace{1pt}
+
+% Sustech
+\resumeSubheading
+{Southern University of Science and Technology}{Shenzhen, China}
+{\textbf{B.S.} in Intelligent Medical Engineering; \textbf{GPA: 3.82/4.00}}{Aug 2020 -- Jun 2024}
+
+\resumeItem{\small \textit{Relevant coursework:}
+  Medical Robotics, Principles of Electrical Circuits, Signals and Systems, Digital Signal
+  Processing, Medical Imaging, Machine Learning, Neural Engineering, BCI.}
+\vspace{-4pt}
+% \resumeItem{\textit{Thesis title:} Design and Validation of an Inertial-based
+% Navigation System for Total Hip Arthroplasty Surgeries via Direct Anterior Approach}
+% \vspace{-5pt}
+\resumeItem{\textit{Advisor: Dr. Mingming Zhang}}
+\vspace{1pt}
+
+% KTH
+\resumeSubheading
+{KTH Royal Institute of Technology}{Stockholm, Sweden}
+{Exchange student in Electrical Engineering and Computer Science}{Sep 2023 -- Jan 2024}
+
+\resumeItem{\small \textit{Relevant coursework:}
+  Principles of Wireless Sensor Networks, Social Robotics.
+}
+\vspace{-5pt}
+\resumeItem{\textit{Advisor: Dr. Seraina Dual}}
+\vspace{1pt}
+
+% \resumeSubheading
+% {Imperial College London}{London, United Kingdom}
+% {Data Science Bachelor Summer School;}{Jun 2022 -- Aug 2022}
+\vspace{-5pt}
+\resumeSubHeadingListEnd
+%----------------------------------------------------
+%                 Publications
+%----------------------------------------------------
+\section{Publications \& Patents}
+\vspace{3pt}
+\resumeItemListStart
+  \resumeItem{\textbf{\underline{C. Gu}}, T. A. Brumfiel, N. Malhotra, and J. P. Desai, “Design and Modeling of a Polymer-based Hydraulic Continuum Robot for Minimal Invasive Surgery,” International Symposium on Medical Robotics (ISMR), 2026. (\textbf{Under review})
+}
+\vspace{-13pt}
+  \resumeItem{
+    \textbf{\underline{Chenyu Gu}}, Weicong Lin, Xinyi He, Lei Zhang, Mingming Zhang, “IMU-based motion capture system for rehabilitation applications: A systematic
+    review,” \textit{Biomimetic Intelligence and Robotics}, vol. 3, no. 2, p. 100097, 2023. DOI: \href{https://doi.org/10.1016/j.birob.2023.100097}{10.1016/j.birob.2023.100097}. (Annual Best Paper Award) \textbf{(IF: 5.4)}
+  }
+\vspace{-2pt}
+  \resumeItem{
+  \textbf{\underline{Chenyu Gu}}, Yangyi Yu, Xinyi He, Lei Zhang, Zhen Xi, Yudong Liu, Guangheng Li, and Mingming Zhang, "A Portable Inertial Navigation System for Total Hip Arthroplasty Targeting Direct Anterior Approach," in \textit{IEEE Transactions on Instrumentation and Measurement}, doi: 10.1109/TIM.2025.3548784. \textbf{(IF: 5.9)}
+  }
+\vspace{-2pt}
+    \resumeItem{
+Li Guangheng, Zhang Mingming, Yu Yangyi, and \textbf{\underline{Chenyu Gu}}. A joint replacement simulation device and a joint replacement simulation method. China CN118634071A, filed July 9, 2024, and issued September 13, 2024. 
+  }
+% https://patents.google.com/patent/CN118634071A/en?oq=CN118634071A.
+\vspace{-2pt}
+  \resumeItem{
+    Zhang Mingming, and \textbf{\underline{Chenyu Gu}}. Human motion capture method, system and storage medium. China CN118870291A, filed July 9, 2024, and issued October 29, 2024. 
+  }
+\vspace{-2pt}
+  % https://patents.google.com/patent/CN118870291A/en?oq=CN118870291A.
+\resumeItemListEnd
+\vspace{-5pt}
+\vspace{-5pt}
+
+%----------------------------------------------------
+%                 Experience
+%----------------------------------------------------
+\section{Research Experience}
+\vspace{3pt}
+\resumeSubHeadingListStart
+
+%---------- Hydraulic Tendon Driven Guidewire ----------
+\resumeSubheading
+{Design, modeling, and control of a hydraulically actuated robot}{Atlanta, United States}
+{Project Leader in RoboMed Lab \textbf{Skills: CAD Modeling, Robotics Modeling \& Control}}{Oct 2024 -- Present}
+\resumeItemListStart
+\resumeItem{Design and develop the overall architecture and structure of the hydraulic robotic system aiming for non-conductive, MRI safe environment.}
+\resumeItem{Formulate the physical model for the hydraulic robot and refine it with a data-driven model.}
+\resumeItem{Implement position feedback for accurate control and validate the model and control with experiment results.}
+\resumeItemListEnd
+
+%---------- Stiffness control of COAST Guidewire ----------
+\resumeSubheading
+{Mechanism and actuation design of COAST Guidewire Robot}{Atlanta, United States}
+{Project Assistant in RoboMed Lab \textbf{Skills: Circuit \& PCB Design}}{Jul 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Contributed to the development of a modified COAST robotic guidewire enabling active stiffness control to enhance steerability and safety in minimally invasive cardiovascular interventions.}
+\resumeItem{Led the electrical development of the system, including PCB and circuit design, wiring, and integration of sensors, actuators to enable precise robotic functionality.}
+\resumeItemListEnd
+%---------- Navigation System for Surgeries ----------
+\resumeSubheading
+{Navigation System for Surgeries}{Shenzhen, China}
+{Project Leader in Brain-robot Rehabilitation Lab \textbf{Skills: Software \& Hardware Design}}{Feb 2023 -- Jun 2024}
+\resumeItemListStart
+\resumeItem{Designed a surgery navigation system with both hardware and software, enabling real-time tracking.}
+\resumeItem{Conduct experiments to validate the system’s effectiveness in both validity and reliability.}
+\resumeItemListEnd
+
+%---------- Movement Analysis ----------
+\resumeSubheading
+{Movement Analysis using IMU Sensors}{Stockholm, Sweden}
+{Visiting Student in Intelligent Heart Technology Lab \textbf{Skills: Kalman Filter \& Sensor Fusion}}{Oct 2023 -- Jan 2024}
+\resumeItemListStart
+\resumeItem{Extracted gait parameters and human center of mass to explore the relationship between human movement and cardiovascular function.}
+\resumeItem{Deployed a Kalman filter for orientation estimation, calibrated IMU angles, and developed algorithms for gait/COM extraction.}
+\resumeItemListEnd
+
+%---------- Motion Capture for Rehabilitation ----------
+\resumeSubheading
+{Motion Capture for Rehabilitation}{Shenzhen, China}
+{Project Leader in Brain-robot Rehabilitation Lab \textbf{Skills: Signal Processing, Deep Learning}}{Apr 2022 -- May 2024}
+\resumeItemListStart
+\resumeItem{Integrated UWB technology and IMU to develop a motion capture system for human motion recovery.}
+\resumeItem{Developed Unity visualization and Python code for signal transmission, and applied deep learning for sparse motion capture.
+}
+\resumeItem{Evaluated the system’s effectiveness on healthy subjects during rehabilitation exercises.}
+\resumeItemListEnd
+
+
+
+%---------- Center of Mass Estimation ----------
+\resumeSubheading
+{Center of Mass Estimation and Rehabilitation Applications}{Shenzhen, China}
+{Project Assistant in Brain-robot Rehabilitation Lab \textbf{Skills: Data Analysis, Acquisition}}{Oct 2022 -- Aug 2023}
+\resumeItemListStart
+\resumeItem{Used IMU-based motion capture and Opensim to estimate the 3D center of mass for rehabilitation applications.}
+\resumeItem{Analyzed the center of mass to extract motion features and perform rehabilitation assessments.}
+\resumeItemListEnd
+
+% %---------- Review on Motion Capture for Rehabilitation ----------
+% \resumeSubheading
+% {Review on Motion Capture for Rehabilitation}{Shenzhen, China}
+% {Researcher in Brain-robot Rehabilitation Lab}{Jun 2022 -- Oct 2022}
+% \resumeItemListStart
+% \resumeItem{Investigated current IMU-based motion capture technology for rehabilitation and authored a comprehensive review.}
+% \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Working \& Teaching Experience}
+\vspace{3pt}
+\resumeSubHeadingListStart
+
+%---------- GTA ML ----------
+\resumeSubheading
+{Graduate Teaching Assistant at Georgia Tech}{Atlanta, United States}
+{GTA for Machine Learning (CS 7641)}{Fall 2025}
+\resumeItemListStart
+\resumeItem{Held weekly office hours and review sessions to clarify concepts in supervised/unsupervised learning, reinforcement learning, and optimization.}
+\resumeItem{Grading homework assignments, projects, and exams for over 300 graduate students.}
+\resumeItemListEnd
+%---------- Navigation System for Surgeries ----------
+\resumeSubheading
+{Department of Orthopedics, First People’s Hospital}{Shenzhen, China}
+{Research Assistant}{Jun 2023 -- Aug 2023}
+\resumeItemListStart
+\resumeItem{Conducted a clinical investigation to identify suitable navigation and measurement devices to support orthopedic surgeries.}
+\resumeItem{Performed clinical validation in the operating room and evaluated the functionality and reliability of the device.}
+\resumeItemListEnd
+
+%---------- Clinical perception ----------
+\resumeSubheading
+{Rehabilitation Center, Second People’s Hospital }{Shenzhen, China}
+{Student Assistant}{Aug 2022}
+\resumeItemListStart
+\resumeItem{Assisted doctors in rehabilitation evaluations and facility setup for patient rehabilitation.}
+\resumeItem{Acquired familiarity with basic rehabilitation facilities and procedures.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+
+
+%----------------------------------------------------
+%             Awards & Achievements
+%----------------------------------------------------
+\section{Awards \& Achievements}
+\vspace{2pt}
+% \small{
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Excellent Graduation Thesis Award (Top 10)}
+  {Jul 2024}
+  {}
+  {}
+\vspace{-18pt}
+% \resumeItemListStart
+%   \resumeItem{Awarded to the top 10 graduation theses in the Department of Biomedical Engineering, selected by the faculty committee for exceptional research quality, originality, and academic excellence.}
+% \resumeItemListEnd
+
+
+% Provincial-level “Internet Plus” Innovation and Entrepreneurship Competition
+\resumeSubheading
+  {“Internet Plus” Innovation and Entrepreneurship Competition}
+  {Aug 2023, Jul 2022}
+  {}
+  {}
+\vspace{-18pt}
+% \resumeItemListStart
+%   \resumeItem{Awarded for outstanding innovation and entrepreneurial initiative, awarded to the top teams over the provincial region (selected from the School level candidates) whose business plans demonstrated market potential, technical feasibility, and social impact.}
+% \resumeItemListEnd
+
+% School-level “Internet Plus” Innovation and Entrepreneurship Competition
+% \resumeSubheading
+%   {“Internet Plus” Innovation and Entrepreneurship Competition}
+%   {Jul 2022}
+%   {}
+%   {}
+% \vspace{-18pt}
+% \resumeItemListStart
+%   \resumeItem{Awarded to the top projects within the university level whose business plans demonstrated market potential, technical feasibility, and social impact.}
+% \resumeItemListEnd
+
+% School-level Excellent Team of “Sycamore Tree” Competition
+\resumeSubheading
+  {Excellent Team of “Sycamore Tree” Competition}
+  {May 2022}
+  {}
+  {}
+\vspace{-18pt}
+% \resumeItemListStart
+%   \resumeItem{Honored as one of the outstanding teams in the “Sycamore Tree”  innovation contest for developing a that combined technical innovation with social responsibility.}
+% \resumeItemListEnd
+
+% National-level RoboMaster 2021 Mecha Master Super Competition (First Prize)
+\resumeSubheading
+  {RoboMaster 2021 Robotics Mecha Master Super Competition (First Prize)}
+  {Sep 2021}
+  {}
+  {}
+\vspace{-18pt}
+% \resumeItemListStart
+%   \resumeItem{Won the First Prize at the national RoboMaster Mecha Master Super Competition by designing and programming a high-performance robot, demonstrating superior mechanical design, control algorithms, and collaborative teamwork.}
+% \resumeItemListEnd
+
+% Top 3 in the Major “Fu Turui” Fellowship, Dept. of Biomedical Engineering
+\resumeSubheading
+  {“Fu Turui” Fellowship, Dept. of Biomedical Engineering (Top 3)}
+  {Oct 2021}
+  {}
+  {}
+\vspace{-18pt}
+% \resumeItemListStart
+%   \resumeItem{Selected as the top three students in the Biomedical Engineering department for outstanding academic performance.}
+% \resumeItemListEnd
+
+% Top 4 in the Province First Prize Scholarship for Freshmen
+\resumeSubheading
+  {First Prize Scholarship for Freshmen (Top 4)}
+  {Sep 2020}
+  {}
+  {}
+\vspace{-18pt}
+% \resumeItemListStart
+%   \resumeItem{Awarded to the top four freshmen across the province for exceptional academic performance.}
+% \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+  % \begin{tabular}{p{16.3cm}@{\extracolsep{\fill}}r}
+  %   \textbf{ }                             &          \\[3pt]
+  %   \textbf{(School-level) Outstanding Student Scholarship of Zhicheng College}             & 2021, 2022, 2023 \\[3pt]
+  %   \textbf{(Provincial-level) "Internet Plus" Innovation and Entrepreneurship Competition} & Aug 2023         \\[3pt]
+  %   \textbf{(School-level) "Internet Plus" Innovation and Entrepreneurship Competition}     & Jul 2022         \\[3pt]
+  %   \textbf{(School-level) Excellent Team of "Sycamore Tree" Competition}                   & May 2022         \\[3pt]
+  %   \textbf{(National-level) RoboMaster 2021 Mecha Master Super Competition (First Prize)}  & Sep 2021         \\[3pt]
+  %   \textbf{(Top 3 in the Major) "Fu Turui" Fellowship, Dept. of Biomedical Engineering}    & Oct 2021         \\[3pt]
+  %   \textbf{(Top 4 in the Province) First Prize Scholarship for Freshmen}                   & Sep 2020
+  % \end{tabular}
+% }
+
+%----------------------------------------------------
+%                     Skills
+%----------------------------------------------------
+\section{Skills \& Knowledge}
+\vspace{3pt}
+\resumeItemListStart
+
+\resumeItem{\textbf{Laboratory:}
+  FEM analysis, 3D printing, PCB design, Oscilloscope, Signal generator, Motion capture.
+}
+
+\resumeItem{\textbf{Programming:}
+  Python (Data analysis and PyTorch), C (Embedded system), MATLAB, Simulink, Rust, Java.
+}
+
+\resumeItem{\textbf{Software:}
+  ANSYS, Opensim, SolidWorks, Arduino, EasyEDA/Altium, Unity, Blender.
+}
+
+\resumeItem{\textbf{Tools:}
+  Git, Neovim, Docker, Jupyter, VS Code, Adobe PS, Final Cut Pro, Microsoft Office.
+}
+
+\resumeItem{\textbf{Languages:}
+  Chinese (Native speaker), English (Proficient), Japanese and French (Elementary).
+}
+
+\resumeItemListEnd
+\vspace{-5pt}
+\vspace{-5pt}
+
+
+% %----------------------------------------------------
+% %                   Projects
+% %----------------------------------------------------
+% \section{Projects}
+% \vspace{3pt}
+% \resumeSubHeadingListStart
+
+% \resumeSubheading
+% {Finite Element Analysis of Magnetically Actuated Peel Test}{Course Project \textbf{Grade: A}}
+% {Team Member}{Apr 2023 -- May 2023}
+% \resumeItemListStart
+% \resumeItem{Simulated a magnetically actuated peel test in ANSYS to study delamination behavior in thin-film systems.}
+% \resumeItem{Modeled peel stress using both interfacial stress analysis and cohesive zone modeling approaches.}
+% \resumeItem{Performed mesh convergence studies to ensure numerical accuracy and compared simulation results with experimental data.}
+% \resumeItemListEnd
+
+% \resumeSubheading
+% {Predicting Drug-Target Binding Affinity}{Course Project \textbf{Grade: A}}
+% {Team Member}{Mar 2025 -- May 2025}
+% \resumeItemListStart
+% \resumeItem{Built ML models on BindingDB to predict drug-target affinity using engineered SMILES and protein features.}
+% \resumeItem{Applied PCA for dimensionality reduction and trained Random Forest and neural network regressors.}
+% \resumeItem{Performed KMeans clustering for unsupervised analysis; evaluated using weighted affinity standard deviation.}
+% \resumeItemListEnd
+
+% \resumeSubheading
+% {Design a Prototype of a Cardiopulmonary Resuscitation Robot}{Course Project \textbf{Grade: A}}
+% {Project Leader}{Apr 2023 -- May 2023}
+% \resumeItemListStart
+% \resumeItem{Designed a prototype medical robot for cardiopulmonary resuscitation.}
+% \resumeItem{Completed 3D modeling of the drone robot in SolidWorks and developed the robot's kinematic/control flow.}
+% \resumeItemListEnd
+
+% \resumeSubheading
+% {Road Network Visualization of Taxi Data}{Course Project \textbf{Grade: A}}
+% {Project Leader}{May 2023 -- Apr 2023}
+% \resumeItemListStart
+% \resumeItem{Visualized Shenzhen taxi data and performed data analysis (origin-destination, density).}
+% \resumeItem{Cleaned large-scale data, extracted relevant features, and proposed urban construction improvements based on findings.}
+% \resumeItemListEnd
+
+% \resumeSubheading
+% {Word Representation in Biomedical Domain}{Summer School \textbf{Grade: B}}
+% {Project Assistant, Imperial College London}{Jul 2022 -- Aug 2022}
+% \resumeItemListStart
+% \resumeItem{Developed a deep learning model for word representation in the medical field using n-gram, skip-gram, and t-SNE for visualization.}
+% \resumeItemListEnd
+
+% \resumeSubHeadingListEnd
+
+
+% %----------------------------------------------------
+% %            Extracurricular Activities
+% %----------------------------------------------------
+% \section{Extracurricular Activities \& Campus Involvement}
+% \vspace{3pt}
+% \resumeSubHeadingListStart
+
+% \resumeSubheading
+% {Georgia Tech Wreck Summer Camp}{Jun 2022 -- Aug 2022}
+% {Camp Counselor}{Atlanta, GA}
+% \resumeItem{Supervised and led STEM-focused activities for elementary and middle school students in a summer camp setting.}
+
+% \resumeSubheading
+% {Georgia Institute of Technology Photography Club}{Aug 2024 -- Jan 2025}
+% {Member of Photography Club}{Atlanta, United States}
+
+% \resumeSubheading
+% {Georgia Institute of Technology Badminton Club}{Aug 2024 -- Jan 2025}
+% {Member of Badminton Club}{Atlanta, United States}
+% % \resumeItem{Joined the school badminton club.}
+
+% \resumeSubheading
+% {South University of Science and Technology Archery Team}{Oct 2020 -- Oct 2021}
+% {Member of School Archery Team}{Shenzhen, China}
+% \resumeItem{Joined the school archery team and organized training/competitions.}
+
+% \resumeSubheading
+% {Student Union of Zhicheng College}{Sep 2020 -- Jun 2021}
+% {Member, Propaganda Department}{Shenzhen, China}
+% \resumeItem{Organized various campus events, including the New Year's Eve party and “Nanke Voice.”}
+
+% \resumeSubHeadingListEnd
+
+%----------------------------------------------------
+%                    Languages
+%----------------------------------------------------
+% \section{Languages}
+% \vspace{3pt}
+% \resumeItemListStart
+% \resumeItem{\textbf{Chinese:} Native speaker}
+% \resumeItem{\textbf{English:} Fluent (TOEFL: 100)}
+% \resumeItem{\textbf{Japanese and German:} Elementary}
+% \resumeItemListEnd
+
+\end{document}
