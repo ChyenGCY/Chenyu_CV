@@ -45,7 +45,7 @@ jobs:
       - name: Prepare Public Folder
         run: |
           mkdir -p public
-          cp CV.pdf public/ 2>/dev/null || :
+          cp CV-short.pdf public/ 2>/dev/null || :
           cp resume.pdf public/ 2>/dev/null || :
 
       # 1. Upload as an Artifact (Internal GitHub storage)
@@ -54,7 +54,7 @@ jobs:
         with:
           name: PDF_files
           path: |
-            CV.pdf
+            CV-short.pdf
             resume.pdf
 
       # 2. Update GitHub Pages (Your live URL)
@@ -73,6 +73,6 @@ jobs:
           name: Latest LaTeX Build
           body: "Auto-generated build from the latest push."
           files: |
-            ./CV.pdf
+            ./CV-short.pdf
             ./resume.pdf
           prerelease: true # Keeps it marked as a draft/rolling build
