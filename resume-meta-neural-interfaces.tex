@@ -59,6 +59,9 @@
 \newcommand{\resumeItem}[1]{
   \item\small{{#1 \vspace{-2.5pt}}}
 }
+\newcommand{\resumeItemStar}[1]{
+  \item[$\star$]\small{{#1 \vspace{-2.5pt}}}
+}
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
@@ -109,15 +112,14 @@
 \section{Research Focus}
 \vspace{1pt}
 {\small Biomedical Engineering Ph.D.\ student working on \textbf{neural interfaces and wearable biosignal
-decoding}: turning noisy, multi-channel body-worn sensor data (\textbf{EMG}, \textbf{IMU},
-stimulation-evoked neuromotor responses) into models of user intent --- hardware and real-time firmware
-through signal processing, deep learning in \textbf{PyTorch}, and human-subject validation.
-Seeking a 12--24 week research internship; I intend to return to my Ph.D.\ program upon completion.}
+decoding}, transforming noisy multi-channel wearable sensor data (\textbf{EMG}, \textbf{IMU},
+stimulation-evoked responses) into physiological features and diagnostic metrics; architecting custom hardware systems and deploying AI-driven signal processing algorithms using \textbf{PyTorch}.
+Seeking a 12-24 week research internship.}
 
 %----------------------------------------------------
 %                   Education
 %----------------------------------------------------
-\vspace{2pt}
+\vspace{-5pt}
 \section{Education}
 \vspace{2pt}
 \resumeSubHeadingListStart
@@ -134,7 +136,7 @@ Seeking a 12--24 week research internship; I intend to return to my Ph.D.\ progr
 {Southern University of Science and Technology}{Shenzhen, China}
 {\textbf{B.S.} in Intelligent Medical Engineering; \textbf{GPA 3.82/4.00}; \textit{Advisor:} Dr.\ Mingming Zhang}{Aug 2020 -- Jun 2024}
 
-\vspace{1pt}
+\vspace{-1pt}
 \resumeItem{\footnotesize \textit{Coursework:} Machine Learning, Digital Signal Processing, Signals and
 Systems, Neural Engineering and Brain--Computer Interfaces, Digital Control, Robotics. Exchange semester
 at KTH Royal Institute of Technology.}
@@ -144,73 +146,85 @@ at KTH Royal Institute of Technology.}
 %----------------------------------------------------
 %                Research Experience
 %----------------------------------------------------
-\vspace{-3pt}
-\section{Research Experience}
+\vspace{-10pt}
+\section{Experience}
 \vspace{2pt}
 \resumeSubHeadingListStart
 
 %---------- Seanez Lab ----------
 \resumeSubheading
-{Graduate Research Assistant --- Seanez Lab, Washington University}{Saint Louis, MO}
-{Multi-channel EMG decoding and spatiotemporal neurostimulation}{Aug 2026 -- Present}
+{EMG decoding and feature extraction for neurostimulation}{Saint Louis, MO}
+{Ph.D. Researcher --- Seanez Lab, Washington University in St. Louis}{Aug 2026 -- Present}
 \resumeItemListStart
-\resumeItem{Lead a 16-participant human study on \textbf{multielectrode transcutaneous spinal cord
-stimulation arrays}, optimizing spatial electrode patterns to steer targeted joint torque --- multi-channel
-array processing over evoked neuromotor signals.}
-\resumeItem{Built Python pipelines for \textbf{16-channel wireless surface EMG}: filtering, stimulus
-artifact handling, stimulus-locked epoching, and quantification of posterior root--muscle reflexes via
-post-activation depression.}
-\resumeItem{Developed \textbf{real-time} frequency-modulated stimulation and monitoring software tracking
-evoked muscle responses alongside autonomic nociception and pain profiles.}
-\resumeItem{Time-synchronized high-density EMG, dynamometer torque, and 3D kinematics into one
-\textbf{multimodal dataset}; modeled recruitment selectivity with linear mixed-effects models over a
-15-session crossover design.}
+\vspace{2pt}
+\resumeItem{Leading a human study on \textbf{neuro interfaces and neuromodulation} using transcutaneous spinal cord
+stimulation.}
+\vspace{2pt}
+\resumeItem{Built Python pipelines for multi-channel sEMG acquisition and analysis, including EMG preprocessing and feature detection.}
+\vspace{2pt}
+\resumeItem{Developed decoding algorithms to extract various physiological features including motor threshold and muscle response.}
+\vspace{2pt}
+\resumeItem{Designed real-time frequency-modulated stimulation and monitoring software to control and track
+evoked muscle responses.}
 \resumeItemListEnd
 
 %---------- Motion capture / deep learning ----------
 \resumeSubheading
-{Project Leader --- Brain-Robot Rehabilitation Lab, SUSTech}{Shenzhen, China}
-{Deep learning for sparse wearable motion capture (IMU + UWB)}{Apr 2022 -- May 2024}
+{Deep learning architecture for wearable motion capture}{Shenzhen, China}
+{Undergraduate Researcher --- Brain-Robot Rehabilitation Lab, SUSTech}{Apr 2022 -- May 2024}
 \resumeItemListStart
-\resumeItem{Built a hybrid \textbf{IMU + UWB} wearable capture system and trained \textbf{deep learning
-models reconstructing full-body kinematics from sparse sensor sets} --- sequence modeling of noisy,
-multi-channel time-series under real wearing conditions.}
-\resumeItem{Owned the full stack --- Python acquisition and streaming, model training and evaluation,
-real-time Unity visualization --- and validated it on human subjects during rehabilitation exercises.}
-\resumeItem{First author of a systematic review on IMU motion capture (\textbf{Annual Best Paper Award});
+\vspace{2pt}
+\resumeItem{Built a hybrid wearable capture system and integrating IMU sensors and ultrawide band sensors.}
+\vspace{2pt}
+\resumeItem{Developed \textbf{cascade deep learning
+models} reconstructing full-body kinematics from sparse sensors, compared different network architecture performance including CNN, RNN, and LSTM.}
+\vspace{2pt}
+\resumeItem{Owned the full stack development from \textbf{Python} acquisition and streaming, model training and evaluation,
+real-time Unity visualization; validated it on human subjects during rehabilitation exercises.}
+\vspace{2pt}
+\resumeItemStar{First author of a peer-reviewed journal publication on IMU motion capture (\textbf{Annual Best Paper Award});
 co-inventor on an issued patent for the motion capture method.}
 \resumeItemListEnd
 
 %---------- Wearable inertial navigation ----------
 \resumeSubheading
-{Project Leader --- Brain-Robot Rehabilitation Lab, SUSTech}{Shenzhen, China}
-{Wearable 9-axis IMU sensing system, hardware to algorithm}{Feb 2023 -- Jun 2024}
+{Wearable IMU sensing system for realtime surgery navigation}{Shenzhen, China}
+{Undergraduate Researcher --- Brain-Robot Rehabilitation Lab, SUSTech}{Feb 2023 -- Jun 2024}
 \resumeItemListStart
-\resumeItem{Co-designed circuit, embedded C firmware, and host software for a body-worn inertial tracking
-system with real-time orientation feedback.}
-\resumeItem{Validated accuracy and repeatability against optical tracking and a robot arm, then in the
-operating room; published in \textit{IEEE Trans.\ Instrumentation and Measurement}.}
+\vspace{2pt}
+\resumeItem{Designed circuit, embedded firmware, and \textbf{Unity HCI interfaces} for a wearable navigation
+system with real-time feedback.}
+\vspace{2pt}
+\resumeItem{Validated accuracy and repeatability against optical tracking and a robot arm, then in real-world operating room.}
+\vspace{2pt}
+\resumeItemStar{Published peer-reviewed paper in \textit{IEEE Trans.\ Instrumentation and Measurement} as a first author.}
 \resumeItemListEnd
 
 %---------- KTH ----------
 \resumeSubheading
-{Visiting Researcher --- Intelligent Heart Technology Lab, KTH}{Stockholm, Sweden}
-{Sensor fusion for gait and physiological signal analysis}{Oct 2023 -- Jan 2024}
+{Sensor fusion for gait and physiological signal analysis}{Stockholm, Sweden}
+{Funded Exchange Researcher --- Intelligent Heart Technology Lab, KTH}{Oct 2023 -- Jan 2024}
 \resumeItemListStart
-\resumeItem{Implemented \textbf{Kalman filtering for IMU orientation estimation} and sensor calibration;
-developed gait-parameter and center-of-mass extraction algorithms.}
-\resumeItem{Related the extracted movement features to cardiovascular measures, linking wearable kinematic
-signals to physiological state.}
+\vspace{2pt}
+\resumeItem{Implemented \textbf{Kalman filtering and sensor for IMU sensor}}
+\vspace{2pt}
+\resumeItem{Developed algorithms to extract gait-parameter and center-of-mass through the biosensors.}
+\vspace{2pt}
+\resumeItem{Measured cardiovascular metrics, designed models investigating the relation between kinematic
+signals to physiological signals.}
 \resumeItemListEnd
 
 %---------- RoboMed ----------
 \resumeSubheading
-{Graduate Researcher --- RoboMed Lab, Georgia Tech}{Atlanta, GA}
-{Data-driven modeling and control of a continuum robot}{Oct 2024 -- May 2026}
+{Design, data-driven modeling and control of a continuum robot}{Atlanta, GA}
+{Master Researcher --- RoboMed Lab, Georgia Tech}{Oct 2024 -- May 2026}
 \resumeItemListStart
-\resumeItem{Modeled a polymer hydraulic continuum robot from first principles, refined it with a
-\textbf{data-driven hysteresis model}, and implemented open- and closed-loop control.
-\textbf{ISMR 2026 Best Student Paper Award}.}
+\vspace{2pt}
+\resumeItem{Designed a polymer hydraulic continuum robot, and develop \textbf{data-driven models for the robot states}}
+\vspace{2pt}
+\resumeItem{Developed a closed-loop control system with the feedforward model.}
+\vspace{2pt}
+\resumeItemStar{Published peer-reviewed paper in \textbf{International Symposium on Medical Robotics} and won the \textbf{Best Paper Award}.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -224,16 +238,19 @@ signals to physiological state.}
 \resumeItemListStart
 \resumeItem{\textbf{Languages \& Tools:} Python (NumPy, SciPy, pandas, scikit-learn, \textbf{PyTorch}),
 C/C++ (embedded, real-time), MATLAB/Simulink, Rust, Java; Git, Linux, Docker, Jupyter.}
-\resumeItem{\textbf{Signals \& ML:} Multi-channel biosignal processing (EMG, IMU, ECG), filtering and
+\vspace{2pt}
+\resumeItem{\textbf{Signals \& ML:} Multi-channel biosignal processing (EMG, IMU, ECG, PPG), filtering and
 artifact rejection, Kalman filtering and sensor fusion, time-series/sequence modeling, deep learning,
 dimensionality reduction and clustering, mixed-effects models and experimental design.}
+\vspace{2pt}
 \resumeItem{\textbf{Systems \& Hardware:} Wearable sensor system design, PCB and analog circuits,
 microcontroller firmware, real-time streaming and multi-device synchronization, Unity visualization,
 optical/inertial motion capture, isokinetic dynamometry.}
+\vspace{2pt}
 \resumeItem{\textbf{Teaching:} Graduate TA, \textbf{Machine Learning (CS 7641)}, Georgia Tech --- office
 hours, review sessions, and project grading for 300+ graduate students (Aug 2025 -- May 2026).}
-\resumeItem{\textbf{Research output:} 4 peer-reviewed papers (2 best-paper awards) and 2 issued patents;
-full list available in my full CV.}
+\vspace{2pt}
+\resumeItem{\textbf{Human Studies \& Research Management:} Managed IRB compliance and protocol execution for patient testing; developed interactive HCI setups and experimental pipelines to record multi-channel physiological data in clinical settings.}
 \resumeItemListEnd
 
 \end{document}
